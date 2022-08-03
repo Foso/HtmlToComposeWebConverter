@@ -20,7 +20,7 @@ class InputNode(private val attrs: List<ComposeAttribute>, val type: String) : M
         val arguments = mutableListOf<String>()
 
         if (attrs.isNotEmpty()) {
-            str += parseAttributes(attrs)
+            arguments.add(parseAttributes(attrs))
         }
 
         if (type.isNotBlank()) {
